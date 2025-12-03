@@ -11,7 +11,7 @@ from pathlib import Path
 # Agregar la carpeta src al path de Python
 sys.path.insert(0, str(Path(__file__).parent / 'src'))
 
-from src.sakila_ETL import ejecutar_etl
+from BD_ETL import ejecutar_etl
 from src.config import EXCEL_FILE, AUTO_OPEN_EXCEL, OUTPUT_FOLDER
 
 def main():
