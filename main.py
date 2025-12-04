@@ -11,7 +11,7 @@ from pathlib import Path
 # Agregar la carpeta src al path de Python
 sys.path.insert(0, str(Path(__file__).parent / 'src'))
 
-from BD_ETL import ejecutar_etl
+from BD_ETL import execute_etl
 from src.config import EXCEL_FILE, AUTO_OPEN_EXCEL, OUTPUT_FOLDER
 
 def main():
@@ -31,7 +31,7 @@ def main():
     
     # PASO 1: Ejecutar proceso ETL
     print("PASO 1: Procesando datos de MySQL...\n")
-    if ejecutar_etl():
+    if execute_etl():
         print("\n✅ Datos procesados exitosamente!")
         
         # PASO 2: Abrir Excel si está configurado en .env
