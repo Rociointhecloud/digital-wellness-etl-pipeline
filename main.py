@@ -6,6 +6,7 @@ import os
 import sys
 from datetime import datetime
 from pathlib import Path
+from src.config import *
  
 
 # Agregar la carpeta src al path de Python
@@ -16,16 +17,16 @@ from src.config import EXCEL_FILE, AUTO_OPEN_EXCEL, OUTPUT_FOLDER
 
 def main():
     """
-    Ejecutar proceso completo de automatización Sakila
+    Ejecutar proceso completo de automatización
     
     Flujo:
-    1. Extrae datos de MySQL (base de datos Sakila)
+    1. Extrae datos de MySQL (base de datos)
     2. Transforma los datos con Pandas
     3. Guarda archivos CSV en carpeta output/
     4. Abre Excel automáticamente (si está configurado)
     """
     print("\n" + "="*50)
-    print("🚀 AUTOMATIZACIÓN SAKILA")
+    print(f"🚀 AUTOMATIZACIÓN {DB_NAME}")
     print("="*50)
     print(f"⏰ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
     
@@ -52,14 +53,13 @@ def main():
             else:
                 print(f"\n⚠️  Archivo Excel no encontrado: {EXCEL_FILE}")
                 print(f"   Crea el archivo en la carpeta 'dashboard/' y vuelve a ejecutar")
-                print(f"\n💡 Ver: dashboard/README.md y docs/GUIA_EXCEL.md para instrucciones")
         
         # Resumen final
         print("\n" + "="*50)
         print("✅ PROCESO COMPLETADO")
         print("="*50)
         print(f"\n📂 Archivos generados en '{OUTPUT_FOLDER}/':")
-        print("   • datos_sakila.csv")
+        print(f"   • {DB_NAME}")
         print("\n💾 Los datos en formato CSV están listos para Excel")
 
     else:
@@ -69,7 +69,7 @@ def main():
         print("\n💡 Posibles causas:")
         print("   1. MySQL no está corriendo")
         print("   2. Credenciales incorrectas en archivo .env")
-        print("   3. Base de datos 'sakila' no existe")
+        print(f"   3. Base de datos {DB_NAME} no existe")
         print("\n📖 Ver: README.md sección 'Solución de Problemas'")
         return False
     
