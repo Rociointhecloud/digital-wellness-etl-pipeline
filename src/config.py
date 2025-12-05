@@ -1,5 +1,5 @@
-# src/config.py
-# Configuración del proyecto - Lee variables desde .env
+###### config.py #####
+
 import os
 from pathlib import Path
 from dotenv import load_dotenv
@@ -12,14 +12,14 @@ dotenv_path = ROOT_DIR / '.env'
 load_dotenv(dotenv_path)
 
 # === CONFIGURACIÓN DE BASE DE DATOS ===
-DB_USER = os.getenv('DB_USER', 'root')
-DB_PASSWORD = os.getenv('DB_PASSWORD', '')
-DB_HOST = os.getenv('DB_HOST', 'localhost')
-DB_PORT = os.getenv('DB_PORT', '3306')
-DB_NAME = os.getenv('DB_NAME', 'sakila')
+DB_USER = os.getenv('DB_USER')
+DB_PASSWORD = os.getenv('DB_PASSWORD')
+DB_HOST = os.getenv('DB_HOST')
+DB_PORT = os.getenv('DB_PORT')
+DB_NAME = os.getenv('DB_NAME')
 
 # === CONFIGURACIÓN DE ARCHIVOS ===
-EXCEL_FILE = os.getenv('EXCEL_FILE', 'Sakila_Dashboard.xlsx')
+EXCEL_FILE = os.getenv('EXCEL_FILE')
 OUTPUT_FOLDER = os.getenv('OUTPUT_FOLDER', 'output')
 
 # === CONFIGURACIÓN DE AUTOMATIZACIÓN ===
