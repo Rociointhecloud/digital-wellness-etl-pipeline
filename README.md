@@ -68,10 +68,30 @@ Excel (Dashboard dinámico y accesible)
  ```
 ---
 
-## Gestión del trabajo y avance del proyecto (Kanban · Agile)
+### Enfoque de trabajo (Agile · 3 sprints)
 
+El proyecto se desarrolló aplicando metodología **Agile**, organizado en **tres sprints iterativos**, desde la configuración inicial hasta el refinamiento final del dashboard.
+
+- **Sprint 1 — Fundamentos y modelado**
+  - Selección y validación del dataset.
+  - Diseño del modelo relacional.
+  - Definición del pipeline MySQL → Python → Excel.
+  - Primer borrador del README y estructura del proyecto.
+
+- **Sprint 2 — Automatización y visualización**
+  - Normalización de la base de datos.
+  - Automatización de la extracción y generación del CSV.
+  - Creación de tablas dinámicas y primeras visualizaciones en Excel.
+  - Definición inicial de KPIs y filtros interactivos.
+
+- **Sprint 3 — Análisis, accesibilidad y refinamiento**
+  - Revisión crítica de métricas y visualizaciones.
+  - Ajuste de criterios estadísticos y coherencia analítica.
+  - Mejora de accesibilidad, legibilidad y carga cognitiva.
+  - Incorporación de texto interpretativo y documentación final.
+
+Este enfoque permitió iterar progresivamente sobre el análisis, validar decisiones técnicas y mejorar la calidad del dashboard sin reabrir el alcance del proyecto.
 ---
-
 ### MARTES · 2/12
 
 #### ROCÍO · Product Owner
@@ -565,4 +585,5 @@ Si quieres mejorar tu propio pipeline, desarrollar un dashboard accesible o expl
 | Mariana Moreno    | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MarianaMH1195) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mariana-moreno-henao-70305a16b) |
 
 ---
+
 
