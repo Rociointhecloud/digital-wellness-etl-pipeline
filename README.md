@@ -249,6 +249,18 @@ Excel (Dashboard dinámico y accesible)
 | **DONE** | - Aprendizajes:<br>&nbsp;&nbsp;• Menos métricas aportan más claridad.<br>&nbsp;&nbsp;• La validación previa de cálculos evita correcciones posteriores.<br>- Mejora propuesta:<br>&nbsp;&nbsp;• Iterar primero sobre tablas dinámicas antes de cerrar el dashboard final.<br>- Refuerzo del rol analítico orientado a decisiones, no solo a datos. |
 
 ---
+### SÁBADO · Iteración de refinamiento (post-sprint)
+
+> Trabajo de refinamiento realizado de forma asíncrona tras el cierre del sprint, orientado a mejorar la coherencia analítica, la claridad visual y la accesibilidad del dashboard final, **partiendo del trabajo ya desarrollado por el equipo**.
+
+#### ROCÍO · Product Owner
+
+| Estado | Tareas |
+| ------ | ------ |
+| **DONE** | - Unificación de criterios estadísticos (uso consistente de promedios en variables personales).<br>- Revisión del peso de KPIs numéricos y sustitución por mensajes interpretativos contextuales.<br>- Clarificación de títulos y preguntas analíticas asociadas a cada gráfico.<br>- Reducción de visualizaciones redundantes para disminuir carga cognitiva.<br>- Mejora de legibilidad (escalas, contraste y coherencia visual).<br>- Refuerzo del rol de los slicers como herramienta central de exploración. |
+
+**Nota:**  
+Esta iteración consolida y refina el dashboard construido durante el sprint, sin modificar el alcance funcional ni las métricas definidas previamente.
 
 ### CONCLUSIÓN DEL EQUIPO
 
@@ -259,8 +271,6 @@ Excel (Dashboard dinámico y accesible)
   - Más validaciones tempranas.
   - Menos retrabajo.
   - Mayor intención en cada decisión visual y técnica.
-
-
 ---
 
 # Tecnologías y Librerías
@@ -555,3 +565,4 @@ Si quieres mejorar tu propio pipeline, desarrollar un dashboard accesible o expl
 | Mariana Moreno    | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MarianaMH1195) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mariana-moreno-henao-70305a16b) |
 
 ---
+
