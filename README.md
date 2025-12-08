@@ -23,6 +23,8 @@ Rocío actúa como Product Owner, priorizando tareas y asegurando la coherencia 
 El trabajo se ha organizado mediante un **backlog priorizado** y un **tablero Kanban** con los estados *Backlog → Ready → In progress → In review → Done*, lo que ha permitido gestionar el avance de forma visual, transparente y colaborativa.  
 Cada decisión relevante se ha documentado en este README y se han realizado sincronizaciones periódicas para asegurar un avance alineado y sostenido.
 
+El desarrollo del proyecto se organizó en **tres sprints**. El primero se centró en sentar la base técnica: selección y validación del dataset, diseño del modelo relacional y definición del pipeline MySQL → Python → Excel. El segundo sprint abordó la **automatización y la visualización**, normalizando los datos, generando el CSV y construyendo las primeras tablas dinámicas y gráficos en Excel. En el tercer sprint el foco estuvo en el **análisis y el refinamiento**, revisando métricas, unificando criterios estadísticos, mejorando la accesibilidad y ajustando el dashboard y la documentación final.
+
 # Objetivos del Proyecto
 1.	Construir una base de datos relacional a partir del dataset Screen Time vs Mental Wellness Survey 2025.
 2.	Automatizar la extracción de datos desde MySQL usando Python.
@@ -458,6 +460,7 @@ Si quieres mejorar tu propio pipeline, desarrollar un dashboard accesible o expl
 | Mariana Moreno    | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MarianaMH1195) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mariana-moreno-henao-70305a16b) |
 
 ---
+
 
 
 
