@@ -1,4 +1,5 @@
-# Mental Wellness & Screen Time — Proyecto IV
+<h1 align="center">Mental Wellness & Screen Time — Proyecto IV</h1>
+<p align="center"><em>Dashboard de análisis sobre hábitos digitales y bienestar</em></p>
 
 <p align="center">
   <img 
@@ -30,6 +31,32 @@ Cada decisión relevante se ha documentado en este README y se han realizado sin
 5.	Analizar de forma crítica la relación entre sueño, estrés, tiempo de pantalla y bienestar social.
 6.	Documentar el proceso con claridad, para que cualquier persona pueda reproducirlo y comprenderlo sin barreras.
 
+## Enfoque de trabajo (Agile · 3 sprints)
+
+El proyecto se desarrolló siguiendo metodología **Agile**, estructurado en **tres sprints iterativos** que permitieron avanzar de forma progresiva desde la base técnica hasta el refinamiento final del dashboard.
+
+Este enfoque facilitó la validación temprana de decisiones, la detección de bloqueos técnicos y la mejora continua sin reabrir el alcance del proyecto.
+
+- **Sprint 1 — Fundamentos y modelado**
+  - Selección y validación del dataset.
+  - Diseño del modelo relacional.
+  - Definición del pipeline MySQL → Python → Excel.
+  - Estructura inicial del repositorio y primer borrador del README.
+
+- **Sprint 2 — Automatización y visualización**
+  - Normalización de la base de datos.
+  - Automatización de la extracción de datos y generación del CSV.
+  - Construcción de tablas dinámicas y primeras visualizaciones en Excel.
+  - Definición inicial de KPIs y filtros interactivos.
+
+- **Sprint 3 — Análisis, accesibilidad y refinamiento**
+  - Revisión crítica de métricas y visualizaciones.
+  - Unificación de criterios estadísticos y coherencia analítica.
+  - Mejora de la accesibilidad, legibilidad y carga cognitiva.
+  - Incorporación de texto interpretativo y documentación final.
+
+El seguimiento detallado por días, roles y estados del tablero Kanban puede consultarse en la documentación de trabajo del proyecto.
+
 ---
 
 # Arquitectura del Pipeline
@@ -43,7 +70,6 @@ CSV generado automáticamente
         ↓
 Excel (Dashboard dinámico y accesible)
 ```
-
 ---
 
 # Estructura del Repositorio
@@ -51,246 +77,24 @@ Excel (Dashboard dinámico y accesible)
 ```
 📦 p4-da-project-data-automation-grupo5/
  ┣ 📁 dashboard/
- │   ┣ digital_welness.xlsx 
+ │   ┗ digital_wellness.xlsx 
  ┣ 📁 output/
- │   ┗ datos_mental_wellness_sample_2025.csv  
+ │   ┗ mental_wellness_sample_2025.csv  
  ┣ 📁 script_sql/
  │   ┗ creacion_bd.sql  
  ┣ 📁 src/
- │   ┣ init.py
+ │   ┣ __init__.py
  │   ┣ BD_ETL.py
  │   ┗ config.py
+ ┣ 📁 docs/
+ │   ┗ proceso_agile.md
  ┣ 📄 .env.example
  ┣ 📄 .gitignore
  ┣ 📄 main.py
  ┣ 📄 README.md
  ┗ 📄 requirements.txt
+
  ```
----
-
-### Enfoque de trabajo (Agile · 3 sprints)
-
-El proyecto se desarrolló aplicando metodología **Agile**, organizado en **tres sprints iterativos**, desde la configuración inicial hasta el refinamiento final del dashboard.
-
-- **Sprint 1 — Fundamentos y modelado**
-  - Selección y validación del dataset.
-  - Diseño del modelo relacional.
-  - Definición del pipeline MySQL → Python → Excel.
-  - Primer borrador del README y estructura del proyecto.
-
-- **Sprint 2 — Automatización y visualización**
-  - Normalización de la base de datos.
-  - Automatización de la extracción y generación del CSV.
-  - Creación de tablas dinámicas y primeras visualizaciones en Excel.
-  - Definición inicial de KPIs y filtros interactivos.
-
-- **Sprint 3 — Análisis, accesibilidad y refinamiento**
-  - Revisión crítica de métricas y visualizaciones.
-  - Ajuste de criterios estadísticos y coherencia analítica.
-  - Mejora de accesibilidad, legibilidad y carga cognitiva.
-  - Incorporación de texto interpretativo y documentación final.
-
-Este enfoque permitió iterar progresivamente sobre el análisis, validar decisiones técnicas y mejorar la calidad del dashboard sin reabrir el alcance del proyecto.
----
-### MARTES · 2/12
-
-#### ROCÍO · Product Owner
-
-| Estado | Tareas |
-| ------ | ------ |
-| **TO DO** | - Buscar base de datos actual que sustituya a Sakila (evitar datasets obsoletos).<br>- Verificar condición del formador: base relacional y tamaño reducido (~17 filas).<br>- Preparar propuesta clara para el equipo.<br>- Avanzar README (estructura general y accesibilidad).<br>- Buscar imágenes para storytelling del proyecto. |
-| **DOING** | - Revisión de bases de datos recientes (2025) y evaluación de viabilidad.<br>- Documentación de decisiones técnicas y adaptación del dataset.<br>- Comunicación interna para definir roles, tiempos y enfoque.<br>- Propuesta formal de rol como Product Owner. |
-| **DONE** | - Selección de dataset: Screen Time vs Mental Wellness Survey (2025).<br>- Diseño del modelo relacional.<br>- Decisión de generar tabla final de 17 filas desde el dataset completo.<br>- Validación del formador:<br>&nbsp;&nbsp;• Base de datos aprobada.<br>&nbsp;&nbsp;• Flujo aprobado: MySQL (normalización) → Python → Excel.<br>- Primer borrador del README completado.<br>- Imágenes seleccionadas y registradas. |
-
----
-
-#### JAIME · Scrum Master
-
-| Estado | Tareas |
-| ------ | ------ |
-| **TO DO** |  |
-| **DOING** |  |
-| **DONE** |  |
-
----
-
-#### MARIANA · Data Analyst
-
-| Estado | Tareas |
-| ------ | ------ |
-| **TO DO** |  |
-| **DOING** |  |
-| **DONE** |  |
-
----
-
-### MIÉRCOLES · 3/12
-
-#### ROCÍO · Product Owner
-
-| Estado | Tareas |
-| ------ | ------ |
-| **TO DO** | - Analizar integración del video compartido (YouTube).<br>- Enviar README al formador.<br>- Añadir en README:<br>&nbsp;&nbsp;• “Para quién es este dashboard”.<br>&nbsp;&nbsp;• Mapa del dashboard y cómo leerlo.<br>&nbsp;&nbsp;• “Qué decisiones permite tomar”.<br>&nbsp;&nbsp;• Bloque inicial “En 20 segundos”.<br>- Redefinir paleta de colores con propósito.<br>- Revisar estructura del dashboard.<br>- Verificar que cada gráfico responde a una sola pregunta.<br>- Ajustar textos para reducir carga cognitiva. |
-| **DOING** | - Integración de reglas del video en la documentación.<br>- Revisión de saturación de KPIs.<br>- Ajustes de layout según retícula. |
-| **DONE** | - Resumen del video realizado.<br>- Aplicación conceptual de reglas al proyecto.<br>- Identificación de mejoras en dashboard y README. |
-
----
-
-#### TRABAJO CONJUNTO · ROCÍO + JAIME  
-**Horario:** 11:30 – 14:00
-
-**Incidencias detectadas**
-
-- Unknown table en DROP / INSERT.
-- Tipos incompatibles en `user_id`.
-- Errores de sintaxis SQL (1064).
-- Bloqueos por claves foráneas.
-- Incompatibilidad FK / PK.
-- Bloqueo por `secure-file-priv`.
-- Advertencias `utf8` / `utf8mb3`.
-
-**Acciones realizadas**
-
-- Corrección del orden de ejecución de scripts.
-- Homogeneización de `user_id` como INT.
-- Ajuste de engines a InnoDB.
-- Carga de datos vía Python (`pandas → to_sql`).
-- Corrección de sintaxis SQL.
-- Verificación de tablas y registros.
-- Limpieza de CSV y encoding previo a inserción.
-
-**Resultado**
-
-- 400 registros cargados en `mental_wellness_raw`.
-- Tablas normalizadas correctamente.
-- Tabla final de muestra creada (17 filas).
-- Flujo MySQL → Python → CSV operativo.
-- Output listo: `mental_wellness_sample.csv`.
-
-**Estado:** Resuelto.
-
----
-
-#### MARIANA · Data Analyst  
-
-> Nota: Mariana avisó previamente al equipo de que no podría estar presente durante la jornada.
-
-| Estado | Tareas |
-| ------ | ------ |
-| **TO DO** |  |
-| **DOING** |  |
-| **DONE** |  |
-
----
-
-#### JAIME · Scrum Master (miércoles)
-
-| Estado | Tareas |
-| ------ | ------ |
-| **TO DO** | - Compartir aprendizajes de proyectos anteriores.<br>- Aplicar buenas prácticas de repositorios Factoría F5 (Madrid).<br>- Mejorar atractivo visual y coherencia del proyecto. |
-| **DOING** |  |
-| **DONE** |  |
-
----
-
-#### MARIANA · Data Analyst
-
-| Estado | Tareas |
-| ------ | ------ |
-| **TO DO** |  |
-| **DOING** |  |
-| **DONE** |  |
-
----
-
-### JUEVES
-
-#### ROCÍO · Product Owner (ausente)  
-
-> Nota: Rocío avisó previamente de que no podría asistir y no estuvo presente durante la jornada.
-
-| Estado | Tareas |
-| ------ | ------ |
-| **TO DO** | - Solicitar actualización del estado del proyecto al equipo.<br>- Revisar avances de Excel, tablas dinámicas, KPIs y dashboard más adelante.<br>- Mantener seguimiento asíncrono del progreso. |
-| **DOING** | - Comunicación asíncrona con el equipo para conocer el estado del trabajo.<br>- Revisión posterior del README ya compartido como guía de trabajo. |
-| **DONE** | - Aviso previo de ausencia al equipo.<br>- Alineación previa del alcance y criterios del dashboard a través del README.<br>- Coordinación asíncrona para asegurar continuidad del proyecto. |
-
----
-
-#### JAIME · Scrum Master
-
-| Estado | Tareas |
-| ------ | ------ |
-| **TO DO** | - Continuar desarrollo del dashboard en Excel.<br>- Asegurar coherencia entre KPIs, tablas dinámicas y objetivos del proyecto. |
-| **DOING** | - Creación y ajuste de tablas dinámicas a partir del dataset final.<br>- Definición y validación de KPIs principales.<br>- Construcción del dashboard en Excel junto a Mariana.<br>- Revisión de estructura, filtros y lectura del dashboard. |
-| **DONE** | - Dashboard funcional en Excel.<br>- KPIs definidos y conectados a tablas dinámicas.<br>- Avance sólido alineado con el README y el objetivo del proyecto. |
-
----
-
-#### MARIANA · Data Analyst
-
-| Estado | Tareas |
-| ------ | ------ |
-| **TO DO** | - Preparar datos para visualización en Excel.<br>- Apoyar definición de métricas clave. |
-| **DOING** | - Limpieza y preparación de datos para Excel.<br>- Creación de tablas dinámicas.<br>- Apoyo en la definición de KPIs.<br>- Colaboración directa en la construcción del dashboard.<br>- Validación de cálculos y consistencia de datos. |
-| **DONE** | - Datos listos para análisis en Excel.<br>- Tablas dinámicas correctamente configuradas.<br>- Métricas y KPIs validados.<br>- Contribución directa al dashboard final. |
-
----
-
-### VIERNES · 5/12  
-**Cierre de sprint · Reflexión y mejora continua**
-
-#### ROCÍO · Product Owner
-
-| Estado | Tareas |
-| ------ | ------ |
-| **TO DO** | - Identificar puntos de fricción en el flujo de trabajo.<br>- Priorizar mejoras de comunicación y documentación para futuros proyectos.<br>- Revisar si los objetivos iniciales se tradujeron claramente en el dashboard final. |
-| **DOING** | - Revisión crítica del backlog ejecutado vs. backlog inicial.<br>- Reflexión sobre claridad de requisitos, tiempos y dependencias.<br>- Recogida de feedback del equipo para mejorar la coordinación. |
-| **DONE** | - Identificación de aprendizajes clave:<br>&nbsp;&nbsp;• La documentación temprana (README) acelera el trabajo técnico.<br>&nbsp;&nbsp;• La definición clara de “qué decisión responde cada gráfico” evita retrabajo.<br>- Refuerzo del rol de Product Owner como eje de alineación entre técnica y negocio.<br>- Propuesta de mejora: dedicar más tiempo inicial a validar visualizaciones antes de construirlas. |
-
----
-
-#### JAIME · Scrum Master
-
-| Estado | Tareas |
-| ------ | ------ |
-| **TO DO** | - Detectar bloqueos técnicos recurrentes.<br>- Analizar cómo anticipar incidencias similares en próximos proyectos. |
-| **DOING** | - Evaluación del flujo Kanban y del reparto de tareas.<br>- Revisión de puntos donde se concentró el trabajo técnico crítico. |
-| **DONE** | - Aprendizajes identificados:<br>&nbsp;&nbsp;• Importancia del orden de ejecución y consistencia de tipos en bases de datos.<br>&nbsp;&nbsp;• Valor de atacar los bloqueos técnicos temprano para no frenar al equipo.<br>- Mejora propuesta:<br>&nbsp;&nbsp;• Añadir checkpoints técnicos intermedios antes de integrar cambios grandes.<br>- Consolidación del rol de Scrum Master como facilitador, no solo resolutor. |
-
----
-
-#### MARIANA · Data Analyst
-
-| Estado | Tareas |
-| ------ | ------ |
-| **TO DO** | - Revisar impacto real de KPIs y visualizaciones creadas.<br>- Detectar oportunidades para simplificar métricas sin perder información. |
-| **DOING** | - Análisis crítico de tablas dinámicas y KPIs.<br>- Revisión de si los datos apoyan una lectura clara del problema. |
-| **DONE** | - Aprendizajes:<br>&nbsp;&nbsp;• Menos métricas aportan más claridad.<br>&nbsp;&nbsp;• La validación previa de cálculos evita correcciones posteriores.<br>- Mejora propuesta:<br>&nbsp;&nbsp;• Iterar primero sobre tablas dinámicas antes de cerrar el dashboard final.<br>- Refuerzo del rol analítico orientado a decisiones, no solo a datos. |
-
----
-### SÁBADO · Iteración de refinamiento (post-sprint)
-
-> Trabajo de refinamiento realizado de forma asíncrona tras el cierre del sprint, orientado a mejorar la coherencia analítica, la claridad visual y la accesibilidad del dashboard final, **partiendo del trabajo ya desarrollado por el equipo**.
-
-#### ROCÍO · Product Owner
-
-| Estado | Tareas |
-| ------ | ------ |
-| **DONE** | - Unificación de criterios estadísticos (uso consistente de promedios en variables personales).<br>- Revisión del peso de KPIs numéricos y sustitución por mensajes interpretativos contextuales.<br>- Clarificación de títulos y preguntas analíticas asociadas a cada gráfico.<br>- Reducción de visualizaciones redundantes para disminuir carga cognitiva.<br>- Mejora de legibilidad (escalas, contraste y coherencia visual).<br>- Refuerzo del rol de los slicers como herramienta central de exploración. |
-
-**Nota:**  
-Esta iteración consolida y refina el dashboard construido durante el sprint, sin modificar el alcance funcional ni las métricas definidas previamente.
-
-### CONCLUSIÓN DEL EQUIPO
-
-- El uso de Kanban facilitó visibilidad, foco y coordinación.
-- La definición clara de roles evitó solapamientos.
-- Detectamos que documentar, revisar y reflexionar no ralentiza el proyecto: lo hace más sólido.
-- El próximo proyecto se abordará con:
-  - Más validaciones tempranas.
-  - Menos retrabajo.
-  - Mayor intención en cada decisión visual y técnica.
 ---
 
 # Tecnologías y Librerías
@@ -429,47 +233,116 @@ El objetivo es ofrecer una lectura contextual, observando variaciones entre grup
   >
 </p>
 
-
 ## Decisiones de análisis y diseño
 
-El dashboard no es el resultado de una única iteración, sino de un proceso de selección consciente orientado a mejorar la coherencia analítica, la interpretabilidad y la accesibilidad de los datos.
+El dashboard no es el resultado de una única iteración, sino de un proceso de selección consciente orientado a mejorar la **coherencia analítica**, la **interpretabilidad** y la **accesibilidad** de los datos.
 
-### Elección de métricas
-Las variables relacionadas con bienestar, estrés, sueño y uso de pantallas se representan mediante **promedios**, y no sumas agregadas. Esta decisión evita que las diferencias observadas estén condicionadas por el tamaño de los grupos y permite comparaciones más coherentes entre perfiles.
+### 🔹 Elección de métricas
+Las variables relacionadas con bienestar, estrés, sueño y uso de pantallas se representan mediante **promedios**, y no mediante sumas agregadas.  
+Esta decisión evita que las diferencias observadas estén condicionadas por el tamaño de los grupos y permite comparaciones más coherentes entre perfiles.
 
-### Uso intencional de visualizaciones
-Se ha limitado el uso de gráficos circulares a funciones estrictamente descriptivas (distribución relativa), evitando su empleo para comparaciones directas entre variables. Las relaciones entre indicadores se analizan principalmente mediante gráficos de barras y comparativas de promedios, más adecuadas para este propósito.
+### 🔹 Uso intencional de visualizaciones
+El uso de gráficos circulares se ha limitado a funciones estrictamente descriptivas (distribución relativa), evitando su empleo para comparaciones directas entre variables.  
+Las relaciones entre indicadores se analizan principalmente mediante **gráficos de barras** y **comparativas de promedios**, más adecuadas para este propósito.
 
-### Reducción de KPIs tradicionales
-En lugar de indicadores sintéticos únicos, se optó por incorporar **mensajes interpretativos contextuales**, dependientes de los filtros activos. Este enfoque evita simplificaciones excesivas y favorece una lectura más reflexiva de los datos.
+### 🔹 Reducción de KPIs tradicionales
+En lugar de indicadores sintéticos únicos, se optó por incorporar **mensajes interpretativos contextuales**, dependientes de los filtros activos.  
+Este enfoque evita simplificaciones excesivas y favorece una lectura más reflexiva de los datos.
 
-### Diseño basado en exploración
-Los slicers no se conciben como elementos auxiliares, sino como herramientas centrales del análisis. El dashboard está diseñado para explorar perfiles concretos y contrastar patrones entre grupos, sin conducir a una única conclusión predeterminada.
+### 🔹 Diseño basado en exploración
+Los *slicers* no se conciben como elementos auxiliares, sino como **herramientas centrales del análisis**.  
+El dashboard está diseñado para explorar perfiles concretos y contrastar patrones entre grupos, sin conducir a una única conclusión predeterminada.
 
-### Enfoque ético y no causal
-Dado el contexto de salud mental, todas las visualizaciones incluyen referencias explícitas a su carácter descriptivo. Las asociaciones observadas deben interpretarse como tendencias generales y no como relaciones causales directas.
+### 🔹 Enfoque ético y no causal
+Dado el contexto de salud mental, todas las visualizaciones incluyen referencias explícitas a su carácter descriptivo.  
+Las asociaciones observadas deben interpretarse como **tendencias generales**, no como relaciones causales directas.
 
 ---
 
 ## Accesibilidad y decisiones de diseño
 
-El diseño del dashboard sigue principios básicos de accesibilidad y claridad visual:
+<p align="center">
+  <img 
+    src="https://github.com/user-attachments/assets/c956728a-7ff2-4714-9197-b7f5320dfa82"
+    width="35%"
+    alt="Sobrecarga cognitiva y multitarea digital"
+  >
+</p>
+
+<sub>Imagen conceptual sobre sobrecarga informativa que guía las decisiones de accesibilidad y reducción de carga cognitiva del dashboard.</sub>
+
+El diseño del dashboard sigue principios básicos de **accesibilidad** y **claridad visual**:
 
 - Paleta de colores coherente y con contraste suficiente.
 - Uso consistente de escalas y métricas (promedios en lugar de sumas para variables personales).
 - Textos explicativos breves que sustituyen a KPIs rígidos, favoreciendo una lectura reflexiva.
 - Estructura modular que reduce la carga cognitiva y permite explorar los datos paso a paso.
 
-Además, todos los elementos interactivos están pensados para apoyar la exploración, no para dirigir conclusiones cerradas.
+Todos los elementos interactivos están pensados para **apoyar la exploración**, no para dirigir conclusiones cerradas.
+
 ---
 
 ## Nota metodológica
 
-Los resultados mostrados deben interpretarse como **tendencias observadas en una muestra concreta**. Las diferencias entre grupos reflejan patrones agregados y no implican relaciones causales ni diagnósticos individuales.
+Los resultados mostrados deben interpretarse como **tendencias observadas en una muestra concreta**.  
+Las diferencias entre grupos reflejan **patrones agregados** y no implican relaciones causales ni diagnósticos individuales.
 
 Este enfoque busca respetar la complejidad del bienestar digital y evitar simplificaciones excesivas en un ámbito claramente multifactorial.
+---
+
+## Enfoque estadístico del análisis
+
+El dashboard trabaja con **estadística descriptiva** a partir de la muestra del estudio *Screen Time vs Mental Wellness 2025*. No se realizan inferencias ni tests de hipótesis: el objetivo es retratar patrones dentro de esta muestra, no generalizar a toda la población.
+
+### Tipo de variables
+
+- **Nominales:** género, modo de trabajo, ocupación.  
+- **Ordinales:** calidad del sueño, nivel de estrés, calidad del bienestar.  
+- **De razón:** horas de pantalla, horas de sueño, horas sociales.
+
+### Medidas utilizadas
+
+- Para variables cuantitativas personales (sueño, estrés, bienestar, productividad) se utilizan **medias** y **porcentajes**, evitando sumas que solo reflejarían el tamaño del grupo.  
+- Para distribuciones por segmentos (edad, nivel de uso, modalidad laboral) se muestran **frecuencias relativas** (porcentajes) para ver cómo se concentra el uso y detectar posibles asimetrías en los patrones.
+
+### Qué no estamos haciendo
+
+- No se calculan **intervalos de confianza** ni **contrastes de hipótesis**.  
+- No se habla de **causalidad**, solo de asociaciones descriptivas observadas en esta muestra.
 
 ---
+
+## Ejemplos de lectura estadística del dashboard
+
+A continuación se resumen algunas conclusiones que pueden extraerse del dashboard usando herramientas de estadística descriptiva, sin ir más allá de lo que los datos permiten.
+
+### Bloque 1 · Tiempo de pantalla y distribución del uso
+
+- En la muestra, una parte de la población concentra la mayoría de las horas de pantalla: el grupo de **alto uso** reúne la mayor parte del tiempo total, aunque no representa la totalidad de las personas usuarias.  
+- Al comparar **porcentaje de personas** y **porcentaje de horas**, el dashboard diferencia entre:
+  - Frecuencia relativa (cuánta gente hay en alto/bajo uso).  
+  - Peso en la carga total de uso (quién acumula más horas).  
+- Cuando se filtra por edad o modo de trabajo, aparecen segmentos donde ambos porcentajes (usuarios de alto uso y horas totales) se disparan a la vez, lo que apunta a perfiles más expuestos a un uso intensivo de pantallas, sin afirmar que esto cause más estrés.
+
+### Bloque 2 · Horas de sueño y calidad del descanso
+
+- La muestra está desequilibrada: la mayoría de registros se agrupan en **buen descanso**, y un grupo mucho menor en **mal descanso**, algo importante al interpretar medias de grupos pequeños.  
+- Las medias muestran un patrón consistente:
+  - Quienes declaran buen descanso duermen **más horas** y presentan **menor nivel medio de estrés**.  
+  - Quienes declaran mal descanso concentran **menos horas de sueño** y **más estrés medio**.  
+- La diferencia entre grupos es más marcada en estrés que en horas de sueño, lo que sugiere que la **calidad percibida del descanso** recoge algo más que “cuántas horas duermo” (rutina, continuidad, despertares, etc.).
+
+### Bloque 3 · Productividad percibida según modo de trabajo
+
+- La modalidad **remota** presenta las mayores medias de horas de pantalla, pero la **productividad percibida** no aumenta en la misma proporción. No se observa una relación lineal simple del tipo “más pantalla = más productividad”.  
+- Al comparar medias entre remoto, híbrido y presencial, las diferencias en productividad son moderadas frente a las diferencias en horas de pantalla, lo que apunta a una **correlación débil** entre ambas variables en esta muestra.  
+- El dashboard funciona como una tabla de medias segmentadas: permite ver si hay cambios relevantes por modalidad sin necesidad de entrar en modelos de regresión.
+
+### Bloque 4 · Horas sociales y bienestar general
+
+- El reparto de horas de pantalla por edad es claramente **asimétrico**: los grupos de **25–34** y **35–44** años concentran la mayor parte del uso total, mientras que los extremos de edad aportan muchas menos horas.  
+- Al cruzar **promedio de horas de pantalla** y **promedio de bienestar**, no aparece un patrón único del tipo “a más pantalla, peor bienestar” en todos los grupos. Algunos segmentos con muchas horas muestran niveles de bienestar similares a otros con menos pantalla.  
+- Esto sugiere que la relación entre uso de pantallas y bienestar es **multifactorial** y que conviene leerla siempre junto con sueño y socialización. El texto lateral del dashboard recuerda que cada barra representa una **media de grupo**, no la realidad individual de cada persona.
 
 
 # Análisis y Preguntas Clave
@@ -585,6 +458,7 @@ Si quieres mejorar tu propio pipeline, desarrollar un dashboard accesible o expl
 | Mariana Moreno    | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MarianaMH1195) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mariana-moreno-henao-70305a16b) |
 
 ---
+
 
 
 
