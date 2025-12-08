@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1 align="center">Mental Wellness & Screen Time — Proyecto IV</h1>
 <p align="center"><em>Dashboard de análisis sobre hábitos digitales y bienestar</em></p>
 
