@@ -33,32 +33,6 @@ El desarrollo del proyecto se organizó en **tres sprints**. El primero se centr
 5.	Analizar de forma crítica la relación entre sueño, estrés, tiempo de pantalla y bienestar social.
 6.	Documentar el proceso con claridad, para que cualquier persona pueda reproducirlo y comprenderlo sin barreras.
 
-## Enfoque de trabajo (Agile · 3 sprints)
-
-El proyecto se desarrolló siguiendo metodología **Agile**, estructurado en **tres sprints iterativos** que permitieron avanzar de forma progresiva desde la base técnica hasta el refinamiento final del dashboard.
-
-Este enfoque facilitó la validación temprana de decisiones, la detección de bloqueos técnicos y la mejora continua sin reabrir el alcance del proyecto.
-
-- **Sprint 1 — Fundamentos y modelado**
-  - Selección y validación del dataset.
-  - Diseño del modelo relacional.
-  - Definición del pipeline MySQL → Python → Excel.
-  - Estructura inicial del repositorio y primer borrador del README.
-
-- **Sprint 2 — Automatización y visualización**
-  - Normalización de la base de datos.
-  - Automatización de la extracción de datos y generación del CSV.
-  - Construcción de tablas dinámicas y primeras visualizaciones en Excel.
-  - Definición inicial de KPIs y filtros interactivos.
-
-- **Sprint 3 — Análisis, accesibilidad y refinamiento**
-  - Revisión crítica de métricas y visualizaciones.
-  - Unificación de criterios estadísticos y coherencia analítica.
-  - Mejora de la accesibilidad, legibilidad y carga cognitiva.
-  - Incorporación de texto interpretativo y documentación final.
-
-El seguimiento detallado por días, roles y estados del tablero Kanban puede consultarse en la documentación de trabajo del proyecto.
-
 ---
 
 # Arquitectura del Pipeline
@@ -460,6 +434,7 @@ Si quieres mejorar tu propio pipeline, desarrollar un dashboard accesible o expl
 | Mariana Moreno    | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MarianaMH1195) | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mariana-moreno-henao-70305a16b) |
 
 ---
+
 
 
 
