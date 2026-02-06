@@ -9,6 +9,16 @@
   >
 </p>
 
+## Sobre este repositorio
+
+Este repositorio es una copia de portfolio de un proyecto desarrollado en equipo dentro de un entorno formativo.
+
+Se publica con fines de demostración técnica.  
+Los roles, contribuciones y autorías originales se mantienen acreditados.
+
+El proceso de trabajo, la organización en sprints y la coordinación de equipo están documentados en `docs/proceso_agile.md`.
+
+
 # 👩‍💻 Contribuyentes
 
   | Nombre           | GitHub | LinkedIn |
